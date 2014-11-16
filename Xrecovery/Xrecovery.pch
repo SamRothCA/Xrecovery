@@ -1,0 +1,42 @@
+//
+//  Xrecovery.pch
+//  Xrecovery
+//
+//  Created by Sam Rothenberg on 11/7/14.
+//  Copyright (c) 2014 Sam Rothenberg. All rights reserved.
+//
+
+#ifndef Xrecovery_Xrecovery_pch
+#define Xrecovery_Xrecovery_pch
+
+
+#import <Cocoa/Cocoa.h>
+#import <DiskArbitration/DiskArbitration.h>
+
+
+@protocol XrecoveryStage <NSObject>
+
+@property NSView *view;
+
+- (void)enterStage;
+- (void)leaveStage;
+
+- (void)backAction;
+- (void)continueAction;
+
+@end
+
+
+#import "AppDelegate.h"
+
+#import "Utility.h"
+#import "Device.h"
+
+#import "SourceSelection.h"
+#import "DestinationSelection.h"
+#import "SystemTransfer.h"
+
+#import "Xrecovery.h"
+
+
+#endif

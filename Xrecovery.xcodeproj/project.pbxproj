@@ -7,45 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22026ECA1A0D4C3E000802FB /* SystemTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 22026EC81A0D4C3E000802FB /* SystemTransfer.m */; };
+		22026ECB1A0D4C3E000802FB /* SystemTransfer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22026EC91A0D4C3E000802FB /* SystemTransfer.xib */; };
+		223451821A0C6C18000802FB /* DestinationSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 223451801A0C6C18000802FB /* DestinationSelection.m */; };
+		223451831A0C6C18000802FB /* DestinationSelection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223451811A0C6C18000802FB /* DestinationSelection.xib */; };
+		223451871A0C6C32000802FB /* SourceSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 223451851A0C6C32000802FB /* SourceSelection.m */; };
+		223451881A0C6C32000802FB /* SourceSelection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223451861A0C6C32000802FB /* SourceSelection.xib */; };
+		223451941A0CC63C000802FB /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 223451921A0CC63C000802FB /* Device.m */; };
+		223451951A0CC63C000802FB /* Device.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223451931A0CC63C000802FB /* Device.xib */; };
+		2238A6421A0EFCDC000802FB /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2238A6411A0EFCDC000802FB /* Utility.m */; };
 		226D1FFE1A0B6669000802FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D1FFD1A0B6669000802FB /* AppDelegate.m */; };
-		226D20001A0B6669000802FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D1FFF1A0B6669000802FB /* main.m */; };
+		226D20001A0B6669000802FB /* Xrecovery.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D1FFF1A0B6669000802FB /* Xrecovery.m */; };
 		226D20021A0B6669000802FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 226D20011A0B6669000802FB /* Images.xcassets */; };
 		226D20051A0B6669000802FB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226D20031A0B6669000802FB /* MainMenu.xib */; };
-		226D20111A0B6669000802FB /* XrecoveryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 226D20101A0B6669000802FB /* XrecoveryTests.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		226D200B1A0B6669000802FB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 226D1FEF1A0B6669000802FB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 226D1FF61A0B6669000802FB;
-			remoteInfo = Xrecovery;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		22026EC71A0D4C3E000802FB /* SystemTransfer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemTransfer.h; sourceTree = "<group>"; };
+		22026EC81A0D4C3E000802FB /* SystemTransfer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemTransfer.m; sourceTree = "<group>"; };
+		22026EC91A0D4C3E000802FB /* SystemTransfer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemTransfer.xib; sourceTree = "<group>"; };
+		22026ECF1A0D6420000802FB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2234517F1A0C6C18000802FB /* DestinationSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinationSelection.h; sourceTree = "<group>"; };
+		223451801A0C6C18000802FB /* DestinationSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationSelection.m; sourceTree = "<group>"; };
+		223451811A0C6C18000802FB /* DestinationSelection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DestinationSelection.xib; sourceTree = "<group>"; };
+		223451841A0C6C32000802FB /* SourceSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceSelection.h; sourceTree = "<group>"; };
+		223451851A0C6C32000802FB /* SourceSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceSelection.m; sourceTree = "<group>"; };
+		223451861A0C6C32000802FB /* SourceSelection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SourceSelection.xib; sourceTree = "<group>"; };
+		223451911A0CC63C000802FB /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		223451921A0CC63C000802FB /* Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
+		223451931A0CC63C000802FB /* Device.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Device.xib; sourceTree = "<group>"; };
+		2238A6401A0EFCDC000802FB /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		2238A6411A0EFCDC000802FB /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		226D1FF71A0B6669000802FB /* Xrecovery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xrecovery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		226D1FFB1A0B6669000802FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		226D1FFC1A0B6669000802FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		226D1FFD1A0B6669000802FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		226D1FFF1A0B6669000802FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		226D1FFF1A0B6669000802FB /* Xrecovery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Xrecovery.m; sourceTree = "<group>"; };
 		226D20011A0B6669000802FB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		226D20041A0B6669000802FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		226D200A1A0B6669000802FB /* XrecoveryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XrecoveryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		226D200F1A0B6669000802FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		226D20101A0B6669000802FB /* XrecoveryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XrecoveryTests.m; sourceTree = "<group>"; };
+		226D201C1A0C4952000802FB /* Xrecovery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Xrecovery.h; sourceTree = "<group>"; };
+		22C558321A0DD00C000802FB /* Xrecovery.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Xrecovery.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		226D1FF41A0B6669000802FB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		226D20071A0B6669000802FB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -59,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				226D1FF91A0B6669000802FB /* Xrecovery */,
-				226D200D1A0B6669000802FB /* XrecoveryTests */,
 				226D1FF81A0B6669000802FB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,7 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				226D1FF71A0B6669000802FB /* Xrecovery.app */,
-				226D200A1A0B6669000802FB /* XrecoveryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,10 +78,26 @@
 		226D1FF91A0B6669000802FB /* Xrecovery */ = {
 			isa = PBXGroup;
 			children = (
+				226D201C1A0C4952000802FB /* Xrecovery.h */,
+				226D1FFF1A0B6669000802FB /* Xrecovery.m */,
 				226D1FFC1A0B6669000802FB /* AppDelegate.h */,
 				226D1FFD1A0B6669000802FB /* AppDelegate.m */,
-				226D20011A0B6669000802FB /* Images.xcassets */,
 				226D20031A0B6669000802FB /* MainMenu.xib */,
+				2238A6401A0EFCDC000802FB /* Utility.h */,
+				2238A6411A0EFCDC000802FB /* Utility.m */,
+				223451911A0CC63C000802FB /* Device.h */,
+				223451921A0CC63C000802FB /* Device.m */,
+				223451931A0CC63C000802FB /* Device.xib */,
+				223451841A0C6C32000802FB /* SourceSelection.h */,
+				223451851A0C6C32000802FB /* SourceSelection.m */,
+				223451861A0C6C32000802FB /* SourceSelection.xib */,
+				2234517F1A0C6C18000802FB /* DestinationSelection.h */,
+				223451801A0C6C18000802FB /* DestinationSelection.m */,
+				223451811A0C6C18000802FB /* DestinationSelection.xib */,
+				22026EC71A0D4C3E000802FB /* SystemTransfer.h */,
+				22026EC81A0D4C3E000802FB /* SystemTransfer.m */,
+				22026EC91A0D4C3E000802FB /* SystemTransfer.xib */,
+				22C558321A0DD00C000802FB /* Xrecovery.pch */,
 				226D1FFA1A0B6669000802FB /* Supporting Files */,
 			);
 			path = Xrecovery;
@@ -89,24 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				226D1FFB1A0B6669000802FB /* Info.plist */,
-				226D1FFF1A0B6669000802FB /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		226D200D1A0B6669000802FB /* XrecoveryTests */ = {
-			isa = PBXGroup;
-			children = (
-				226D20101A0B6669000802FB /* XrecoveryTests.m */,
-				226D200E1A0B6669000802FB /* Supporting Files */,
-			);
-			path = XrecoveryTests;
-			sourceTree = "<group>";
-		};
-		226D200E1A0B6669000802FB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				226D200F1A0B6669000802FB /* Info.plist */,
+				226D20011A0B6669000802FB /* Images.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -131,24 +132,6 @@
 			productReference = 226D1FF71A0B6669000802FB /* Xrecovery.app */;
 			productType = "com.apple.product-type.application";
 		};
-		226D20091A0B6669000802FB /* XrecoveryTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 226D20171A0B6669000802FB /* Build configuration list for PBXNativeTarget "XrecoveryTests" */;
-			buildPhases = (
-				226D20061A0B6669000802FB /* Sources */,
-				226D20071A0B6669000802FB /* Frameworks */,
-				226D20081A0B6669000802FB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				226D200C1A0B6669000802FB /* PBXTargetDependency */,
-			);
-			name = XrecoveryTests;
-			productName = XrecoveryTests;
-			productReference = 226D200A1A0B6669000802FB /* XrecoveryTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -161,10 +144,6 @@
 					226D1FF61A0B6669000802FB = {
 						CreatedOnToolsVersion = 6.1;
 					};
-					226D20091A0B6669000802FB = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 226D1FF61A0B6669000802FB;
-					};
 				};
 			};
 			buildConfigurationList = 226D1FF21A0B6669000802FB /* Build configuration list for PBXProject "Xrecovery" */;
@@ -173,7 +152,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = 226D1FEE1A0B6669000802FB;
 			productRefGroup = 226D1FF81A0B6669000802FB /* Products */;
@@ -181,7 +159,6 @@
 			projectRoot = "";
 			targets = (
 				226D1FF61A0B6669000802FB /* Xrecovery */,
-				226D20091A0B6669000802FB /* XrecoveryTests */,
 			);
 		};
 /* End PBXProject section */
@@ -191,15 +168,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223451881A0C6C32000802FB /* SourceSelection.xib in Resources */,
 				226D20021A0B6669000802FB /* Images.xcassets in Resources */,
+				223451951A0CC63C000802FB /* Device.xib in Resources */,
+				22026ECB1A0D4C3E000802FB /* SystemTransfer.xib in Resources */,
+				223451831A0C6C18000802FB /* DestinationSelection.xib in Resources */,
 				226D20051A0B6669000802FB /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		226D20081A0B6669000802FB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,34 +184,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				226D20001A0B6669000802FB /* main.m in Sources */,
+				226D20001A0B6669000802FB /* Xrecovery.m in Sources */,
 				226D1FFE1A0B6669000802FB /* AppDelegate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		226D20061A0B6669000802FB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				226D20111A0B6669000802FB /* XrecoveryTests.m in Sources */,
+				223451821A0C6C18000802FB /* DestinationSelection.m in Sources */,
+				22026ECA1A0D4C3E000802FB /* SystemTransfer.m in Sources */,
+				2238A6421A0EFCDC000802FB /* Utility.m in Sources */,
+				223451941A0CC63C000802FB /* Device.m in Sources */,
+				223451871A0C6C32000802FB /* SourceSelection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		226D200C1A0B6669000802FB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 226D1FF61A0B6669000802FB /* Xrecovery */;
-			targetProxy = 226D200B1A0B6669000802FB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		226D20031A0B6669000802FB /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				226D20041A0B6669000802FB /* Base */,
+				22026ECF1A0D6420000802FB /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -279,7 +242,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -315,7 +278,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -324,8 +287,8 @@
 		226D20151A0B6669000802FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Xrecovery/Xrecovery.pch";
 				INFOPLIST_FILE = Xrecovery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -335,47 +298,11 @@
 		226D20161A0B6669000802FB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Xrecovery/Xrecovery.pch";
 				INFOPLIST_FILE = Xrecovery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		226D20181A0B6669000802FB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = XrecoveryTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Xrecovery.app/Contents/MacOS/Xrecovery";
-			};
-			name = Debug;
-		};
-		226D20191A0B6669000802FB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = XrecoveryTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Xrecovery.app/Contents/MacOS/Xrecovery";
 			};
 			name = Release;
 		};
@@ -398,14 +325,7 @@
 				226D20161A0B6669000802FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		226D20171A0B6669000802FB /* Build configuration list for PBXNativeTarget "XrecoveryTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				226D20181A0B6669000802FB /* Debug */,
-				226D20191A0B6669000802FB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

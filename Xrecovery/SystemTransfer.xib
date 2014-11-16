@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14B17" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SystemTransfer">
+            <connections>
+                <outlet property="confirmationCancel" destination="KcC-oQ-Xuy" id="vPj-Yj-6FN"/>
+                <outlet property="confirmationDetails" destination="dXi-Da-lZW" id="IVT-C2-Bbj"/>
+                <outlet property="confirmationHeader" destination="UXL-Ip-T4Y" id="Lnx-mm-p45"/>
+                <outlet property="confirmationProceed" destination="o1v-lO-zos" id="J1T-7v-Osy"/>
+                <outlet property="confirmationWindow" destination="jLS-r6-yoU" id="by1-hk-fGa"/>
+                <outlet property="progressIndicator" destination="p35-sO-uiC" id="YL4-aW-wrW"/>
+                <outlet property="progressLabel" destination="P4p-JO-aw8" id="hAl-jq-gyB"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY" userLabel="System Transfer View">
+            <rect key="frame" x="0.0" y="0.0" width="412" height="377"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mRl-kt-qCw" userLabel="Source Icon">
+                    <rect key="frame" x="89" y="205" width="72" height="72"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="NSApplicationIcon" id="iJV-aL-AAI"/>
+                    <connections>
+                        <binding destination="-2" name="valuePath" keyPath="source.icon.path" id="0l1-hY-kkW"/>
+                    </connections>
+                </imageView>
+                <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T74-i5-eRr" userLabel="Destination Icon">
+                    <rect key="frame" x="251" y="205" width="72" height="72"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="NSApplicationIcon" id="kgc-qm-E9v"/>
+                    <connections>
+                        <binding destination="-2" name="valuePath" keyPath="destination.icon.path" id="EaK-xK-6iK"/>
+                    </connections>
+                </imageView>
+                <progressIndicator hidden="YES" fixedFrame="YES" maxValue="100" displayedWhenStopped="NO" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="p35-sO-uiC" userLabel="Progress Indicator">
+                    <rect key="frame" x="89" y="97" width="234" height="20"/>
+                </progressIndicator>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P4p-JO-aw8" userLabel="Progress Label">
+                    <rect key="frame" x="18" y="98" width="376" height="43"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" placeholderString="Progress" id="Dhl-av-dYE">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="249" y="211.5"/>
+        </customView>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="jLS-r6-yoU" userLabel="Confirmation Window">
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="109" y="131" width="406" height="151"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <view key="contentView" id="NEf-nx-CdR">
+                <rect key="frame" x="0.0" y="0.0" width="406" height="151"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="UXL-Ip-T4Y" userLabel="Confirmation Header">
+                        <rect key="frame" x="102" y="97" width="286" height="34"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Are you sure you want to convert the disk “%@”?" id="OZi-GN-CZK">
+                            <font key="font" metaFont="systemBold"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="dXi-Da-lZW" userLabel="Confirmation Details">
+                        <rect key="frame" x="102" y="61" width="286" height="28"/>
+                        <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" title="Converting the disk to a recovery system erases all of its contents. This cannot be undone." id="5vX-nC-OaN">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KcC-oQ-Xuy" userLabel="Confirmation Cancel Button">
+                        <rect key="frame" x="210" y="13" width="83" height="32"/>
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0Vl-K9-Mr6">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="confirmationCancel:" target="-2" id="TXd-NQ-cQx"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o1v-lO-zos" userLabel="Confirmation Proceed Button">
+                        <rect key="frame" x="293" y="13" width="92" height="32"/>
+                        <buttonCell key="cell" type="push" title="Proceed" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ian-k8-Hyv">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="confirmationProceed:" target="-2" id="l9P-hk-f3z"/>
+                        </connections>
+                    </button>
+                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="H2a-5v-J0G">
+                        <rect key="frame" x="20" y="67" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="S1e-u3-W2Y"/>
+                            <constraint firstAttribute="width" constant="64" id="jUG-02-I2p"/>
+                        </constraints>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="NSApplicationIcon" id="LKq-GH-d6p"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="KcC-oQ-Xuy" firstAttribute="centerY" secondItem="o1v-lO-zos" secondAttribute="centerY" id="1b3-ko-NgQ"/>
+                    <constraint firstItem="UXL-Ip-T4Y" firstAttribute="leading" secondItem="H2a-5v-J0G" secondAttribute="trailing" constant="20" id="3Np-gG-nqh"/>
+                    <constraint firstItem="dXi-Da-lZW" firstAttribute="leading" secondItem="H2a-5v-J0G" secondAttribute="trailing" constant="20" id="8jH-F6-KB0"/>
+                    <constraint firstAttribute="bottom" secondItem="o1v-lO-zos" secondAttribute="bottom" constant="20" id="9AW-kC-pwx"/>
+                    <constraint firstItem="H2a-5v-J0G" firstAttribute="leading" secondItem="NEf-nx-CdR" secondAttribute="leading" constant="20" id="Gsm-jH-gNG"/>
+                    <constraint firstItem="H2a-5v-J0G" firstAttribute="top" secondItem="NEf-nx-CdR" secondAttribute="top" constant="20" id="KLx-zi-MVQ"/>
+                    <constraint firstItem="o1v-lO-zos" firstAttribute="leading" secondItem="KcC-oQ-Xuy" secondAttribute="trailing" constant="12" id="Pch-TU-jAd"/>
+                    <constraint firstAttribute="trailing" secondItem="UXL-Ip-T4Y" secondAttribute="trailing" constant="20" id="Sq9-DE-PKO"/>
+                    <constraint firstItem="dXi-Da-lZW" firstAttribute="top" secondItem="UXL-Ip-T4Y" secondAttribute="bottom" constant="8" id="X3F-LI-qFt"/>
+                    <constraint firstItem="UXL-Ip-T4Y" firstAttribute="top" secondItem="NEf-nx-CdR" secondAttribute="top" constant="20" id="azn-kq-3vi"/>
+                    <constraint firstAttribute="trailing" secondItem="dXi-Da-lZW" secondAttribute="trailing" constant="20" id="bb4-WB-3Ni"/>
+                    <constraint firstItem="KcC-oQ-Xuy" firstAttribute="top" secondItem="dXi-Da-lZW" secondAttribute="bottom" constant="20" id="hv3-1e-R7Y"/>
+                    <constraint firstAttribute="trailing" secondItem="o1v-lO-zos" secondAttribute="trailing" constant="27" id="xou-7G-cku"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="167" y="252.5"/>
+        </window>
+        <userDefaultsController representsSharedInstance="YES" id="vTP-ub-tIj"/>
+    </objects>
+    <resources>
+        <image name="NSApplicationIcon" width="128" height="128"/>
+    </resources>
+</document>

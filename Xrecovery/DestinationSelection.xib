@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14B17" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="DestinationSelection">
+            <connections>
+                <outlet property="arrayController" destination="58M-DA-mgN" id="hvH-93-nHf"/>
+                <outlet property="collectionView" destination="hKE-rY-a4e" id="fvz-SW-ha4"/>
+                <outlet property="view" destination="OOG-kg-hER" id="ezJ-nR-6Y8"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <collectionViewItem nibName="Device" id="s8R-jc-SGD" userLabel="Destination View Controller" customClass="DeviceCollectionViewItem"/>
+        <customView id="OOG-kg-hER" userLabel="Destinations View">
+            <rect key="frame" x="0.0" y="0.0" width="412" height="377"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DaT-Tz-Nku" userLabel="Header">
+                    <rect key="frame" x="-2" y="360" width="134" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Select a destination" id="5iN-6T-zes">
+                        <font key="font" metaFont="systemBold"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12n-GV-ST1" userLabel="Destinations Scroll">
+                    <rect key="frame" x="0.0" y="0.0" width="412" height="310"/>
+                    <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="dNp-F2-jGX" userLabel="Destinations Clip">
+                        <rect key="frame" x="1" y="1" width="248" height="158"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView selectable="YES" maxNumberOfColumns="1" id="hKE-rY-a4e" userLabel="Destinations Collection">
+                                <rect key="frame" x="0.0" y="0.0" width="248" height="158"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <binding destination="58M-DA-mgN" name="content" keyPath="arrangedObjects" id="bjd-OY-JwZ"/>
+                                    <binding destination="58M-DA-mgN" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="bjd-OY-JwZ" id="bi0-2e-e7y"/>
+                                    <outlet property="itemPrototype" destination="s8R-jc-SGD" id="HUL-nR-LXF"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="opr-QC-P5z">
+                        <rect key="frame" x="1" y="144" width="233" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="6TL-fJ-dnb">
+                        <rect key="frame" x="234" y="1" width="15" height="143"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="I8E-Sb-4hE" userLabel="Description">
+                    <rect key="frame" x="-2" y="318" width="416" height="34"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Choose the volume to be converted to a recovery system. The volume will need to be erased." id="0c0-6q-2iW">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="12n-GV-ST1" firstAttribute="top" secondItem="I8E-Sb-4hE" secondAttribute="bottom" constant="8" id="3NN-48-VGA"/>
+                <constraint firstAttribute="bottom" secondItem="12n-GV-ST1" secondAttribute="bottom" id="3aO-xq-sfP"/>
+                <constraint firstItem="I8E-Sb-4hE" firstAttribute="top" secondItem="DaT-Tz-Nku" secondAttribute="bottom" constant="8" id="4nh-gy-7mD"/>
+                <constraint firstAttribute="trailing" secondItem="12n-GV-ST1" secondAttribute="trailing" id="8He-wA-e2g"/>
+                <constraint firstItem="I8E-Sb-4hE" firstAttribute="leading" secondItem="OOG-kg-hER" secondAttribute="leading" id="8rz-qd-jTo"/>
+                <constraint firstItem="12n-GV-ST1" firstAttribute="leading" secondItem="OOG-kg-hER" secondAttribute="leading" id="llx-ss-jc3"/>
+                <constraint firstItem="DaT-Tz-Nku" firstAttribute="leading" secondItem="OOG-kg-hER" secondAttribute="leading" id="oCo-5x-VYF"/>
+                <constraint firstItem="DaT-Tz-Nku" firstAttribute="top" secondItem="OOG-kg-hER" secondAttribute="top" id="uz9-cH-ngy"/>
+                <constraint firstAttribute="trailing" secondItem="I8E-Sb-4hE" secondAttribute="trailing" id="y8Q-oE-fFw"/>
+            </constraints>
+            <point key="canvasLocation" x="212" y="281"/>
+        </customView>
+        <arrayController selectsInsertedObjects="NO" id="58M-DA-mgN"/>
+    </objects>
+</document>

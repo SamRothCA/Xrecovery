@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14B17" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SourceSelection">
+            <connections>
+                <outlet property="arrayController" destination="PrJ-NC-ZBb" id="BXn-CE-A7b"/>
+                <outlet property="collectionView" destination="Dcd-TW-sDf" id="8xI-xb-wVT"/>
+                <outlet property="view" destination="WpX-Al-CJD" id="ucl-84-Kxi"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <collectionViewItem nibName="Device" id="DQO-GS-kfB" userLabel="Source View Controller" customClass="DeviceCollectionViewItem"/>
+        <customView id="WpX-Al-CJD" userLabel="Sources View">
+            <rect key="frame" x="0.0" y="0.0" width="412" height="377"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2gH-9M-Qc1" userLabel="Header">
+                    <rect key="frame" x="-2" y="360" width="416" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="W6P-dR-rQb"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Select a source" id="QaG-Ed-dpP">
+                        <font key="font" metaFont="systemBold"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="M9n-N2-ZBb" userLabel="Description">
+                    <rect key="frame" x="-2" y="301" width="416" height="51"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="dvv-gm-j1M">
+                        <font key="font" metaFont="system"/>
+                        <string key="title">Choose the system to be used as the basis of the new recovery drive. If using an OS X installer, the recovery drive will also serve as an installer.</string>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdO-dE-Tzu" userLabel="Sources Scroll">
+                    <rect key="frame" x="0.0" y="0.0" width="412" height="293"/>
+                    <clipView key="contentView" id="PPU-eU-Ck8" userLabel="Sources Clip">
+                        <rect key="frame" x="1" y="1" width="248" height="158"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView selectable="YES" id="Dcd-TW-sDf" userLabel="Sources Collection">
+                                <rect key="frame" x="0.0" y="0.0" width="248" height="158"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <binding destination="PrJ-NC-ZBb" name="content" keyPath="arrangedObjects" id="Ui0-z5-CWd"/>
+                                    <binding destination="PrJ-NC-ZBb" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="Ui0-z5-CWd" id="xjI-73-rVn"/>
+                                    <outlet property="itemPrototype" destination="DQO-GS-kfB" id="qmz-oP-eix"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="J4u-tL-Ixg">
+                        <rect key="frame" x="1" y="144" width="233" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="TmZ-YX-0wz">
+                        <rect key="frame" x="234" y="1" width="15" height="143"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="DdO-dE-Tzu" secondAttribute="bottom" id="8Jj-1Y-Cx9"/>
+                <constraint firstItem="2gH-9M-Qc1" firstAttribute="top" secondItem="WpX-Al-CJD" secondAttribute="top" id="CQh-8i-wcq"/>
+                <constraint firstItem="M9n-N2-ZBb" firstAttribute="leading" secondItem="WpX-Al-CJD" secondAttribute="leading" id="G0H-60-7OZ"/>
+                <constraint firstItem="M9n-N2-ZBb" firstAttribute="top" secondItem="2gH-9M-Qc1" secondAttribute="bottom" constant="8" id="HHE-Wy-7Ko"/>
+                <constraint firstItem="2gH-9M-Qc1" firstAttribute="leading" secondItem="WpX-Al-CJD" secondAttribute="leading" id="N6w-hN-wGL"/>
+                <constraint firstAttribute="trailing" secondItem="2gH-9M-Qc1" secondAttribute="trailing" id="U38-8b-1wV"/>
+                <constraint firstAttribute="trailing" secondItem="M9n-N2-ZBb" secondAttribute="trailing" id="WTA-MN-8EA"/>
+                <constraint firstItem="DdO-dE-Tzu" firstAttribute="leading" secondItem="WpX-Al-CJD" secondAttribute="leading" id="a9z-B2-5Rb"/>
+                <constraint firstAttribute="trailing" secondItem="DdO-dE-Tzu" secondAttribute="trailing" id="jEf-rl-nez"/>
+                <constraint firstItem="DdO-dE-Tzu" firstAttribute="top" secondItem="M9n-N2-ZBb" secondAttribute="bottom" constant="8" id="rwH-3Y-kU1"/>
+            </constraints>
+            <point key="canvasLocation" x="82" y="180.5"/>
+        </customView>
+        <arrayController selectsInsertedObjects="NO" id="PrJ-NC-ZBb"/>
+    </objects>
+</document>
